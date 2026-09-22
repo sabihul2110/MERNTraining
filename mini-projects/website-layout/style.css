@@ -1,0 +1,72 @@
+/*
+  Browsers give every element a little bit of built-in spacing by
+  default (margin and padding). This line removes all of that, so
+  we start from a clean, empty page and add spacing ourselves later.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.layout {
+  /*
+    "grid" turns this box into a system of rows and columns, kind
+    of like a spreadsheet or graph paper. Once it's a grid, we can
+    place other boxes into specific rows/columns inside it.
+  */
+  display: grid;
+
+  /*
+    This splits the page into 3 columns side-by-side.
+    "1fr 3fr 1fr" means: give the middle column 3 times more
+    space than the two side columns. (fr = "fraction" of the space)
+  */
+  grid-template-columns: 1fr 3fr 1fr;
+
+  /*
+    This splits the page into 3 rows.
+    "auto" = just as tall as the content needs.
+    "1fr"  = take up all the leftover space in between.
+  */
+  grid-template-rows: auto 1fr auto;
+
+  /*
+    This is the easiest way to draw a layout in CSS: you literally
+    write out the grid using names, like a map. Whichever name you
+    give a box below (using grid-area), it snaps into that spot.
+
+    Reading it visually:
+      Row 1: header spans across everything
+      Row 2: nav | main | extra
+      Row 3: footer spans across everything
+  */
+  grid-template-areas:
+    "header header header"
+    "nav main extra"
+    "footer footer footer";
+
+  height: 100vh; /* fill the full height of the browser window */
+  gap: 12px;      /* small space between each box, like a border */
+  padding: 12px;
+  background-color: #f5f6fa;
+}
+
+.box {
+  border: 1px solid #2f3640;
+  display: flex;            /* lets us easily center the text inside */
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* center vertically */
+  background-color: #dcdde1;
+}
+
+/*
+  Here's the actual connection: each id below is matched to a name
+  we wrote inside grid-template-areas above. This is what tells the
+  browser "put THIS box in THAT named spot."
+*/
+#site-header { grid-area: header; }
+#site-nav { grid-area: nav; }
+#site-main { grid-area: main; }
+#site-extra { grid-area: extra; }
+#site-footer { grid-area: footer; }
