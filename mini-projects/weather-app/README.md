@@ -11,3 +11,8 @@ A lightweight Vanilla JavaScript weather dashboard that fetches real-time meteor
 ## Usage
 
 Open `index.html` directly in your browser or serve the folder using VS Code Live Server.
+
+## Live Deployment
+
+- **Deploy Link:** https://sabihul2110.github.io/MERNTraining/mini-projects/weather-app/
+
