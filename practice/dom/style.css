@@ -1,0 +1,12 @@
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  padding: 2rem;
+  background-color: #f8fafc;
+}
+
+.heading-title {
+  background-color: #1e293b;
+  color: #f8fafc;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+}

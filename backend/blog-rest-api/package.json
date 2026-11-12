@@ -1,0 +1,22 @@
+{
+  "name": "blog-rest-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "description": "MVC REST API for blog management with Express, Mongoose, and JWT authentication",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": ["express", "mongodb", "mongoose", "jwt", "rest-api"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.5.0",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.15.1",
+    "nodemon": "^3.1.14"
+  }
+}
